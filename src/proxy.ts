@@ -3,12 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 const PASSWORD = "onjob!";
 const COOKIE_NAME = "procureiq-auth";
 
-export function middleware(request: NextRequest) {
-  // Allow the auth API route through
-  if (request.nextUrl.pathname === "/api/auth") {
-    return NextResponse.next();
-  }
-
+export function proxy(request: NextRequest) {
   const authCookie = request.cookies.get(COOKIE_NAME);
   if (authCookie?.value === PASSWORD) {
     return NextResponse.next();
@@ -22,7 +17,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };
 
 function loginHTML() {
