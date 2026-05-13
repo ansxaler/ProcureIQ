@@ -1,0 +1,4 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install --global sfw && sfw pnpm install --frozen-lockfile"
+}
