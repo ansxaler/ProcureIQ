@@ -8,13 +8,13 @@ interface Props {
 }
 
 const rankColors = [
-  "border-accent-blue bg-accent-blue/5",
-  "border-navy-600 bg-navy-800",
-  "border-navy-600 bg-navy-800",
+  "border-zinc-600 bg-zinc-50/[0.03]",
+  "border-navy-700 bg-navy-800",
+  "border-navy-700 bg-navy-800",
 ];
 
 const rankBadges = [
-  "bg-accent-blue text-navy-900",
+  "bg-zinc-50 text-zinc-950",
   "bg-navy-600 text-white",
   "bg-navy-600 text-white",
 ];
@@ -51,7 +51,7 @@ export default function OptionsStep({ options, onSelect }: Props) {
                 </div>
               </div>
               {i === 0 && (
-                <span className="px-3 py-1 bg-accent-blue/20 text-accent-blue rounded-full text-xs font-semibold">
+                <span className="px-3 py-1 bg-zinc-50/10 text-zinc-300 rounded-full text-xs font-semibold">
                   RECOMMENDED
                 </span>
               )}
@@ -120,8 +120,8 @@ export default function OptionsStep({ options, onSelect }: Props) {
               onClick={() => onSelect(opt)}
               className={`w-full py-2.5 rounded-lg font-semibold transition-all ${
                 i === 0
-                  ? "bg-accent-blue text-navy-900 hover:bg-accent-light"
-                  : "bg-navy-700 text-white hover:bg-navy-600"
+                  ? "bg-zinc-50 text-zinc-950 hover:bg-zinc-200"
+                  : "bg-navy-700 text-zinc-50 hover:bg-navy-600"
               }`}
             >
               Select Option {opt.rank}

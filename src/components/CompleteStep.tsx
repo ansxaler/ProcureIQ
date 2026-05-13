@@ -89,7 +89,7 @@ export default function CompleteStep({ option, requirement, totalTime, onReset }
           <h2 className="text-2xl font-bold">Documents Ready for Review</h2>
           <p className="text-text-muted text-sm">
             Completed in{" "}
-            <span className="text-accent-blue font-mono font-bold">
+            <span className="text-zinc-50 font-mono font-bold">
               {(totalTime / 1000).toFixed(0)}s
             </span>
             {" "}&mdash; review each document before forwarding to the supplier
@@ -105,7 +105,7 @@ export default function CompleteStep({ option, requirement, totalTime, onReset }
         </div>
         <div className="text-center">
           <p className="text-xs text-text-muted uppercase">Total Cost</p>
-          <p className="font-bold text-xl text-accent-blue">
+          <p className="font-bold text-xl text-zinc-50">
             {"\u00A3"}{option.openBookBreakdown.totalCost.toLocaleString()}
           </p>
         </div>
@@ -156,7 +156,7 @@ export default function CompleteStep({ option, requirement, totalTime, onReset }
                   <button
                     onClick={() => handleDownload(doc.key)}
                     disabled={state.downloading}
-                    className="px-3 py-1.5 text-xs font-medium bg-accent-blue/20 hover:bg-accent-blue/30 text-accent-blue rounded-lg transition-colors disabled:opacity-50"
+                    className="px-3 py-1.5 text-xs font-medium bg-zinc-50/10 hover:bg-zinc-50/15 text-zinc-300 rounded-lg transition-colors disabled:opacity-50"
                   >
                     {state.downloading ? "..." : "Download"}
                   </button>
@@ -183,7 +183,7 @@ export default function CompleteStep({ option, requirement, totalTime, onReset }
         <div
           className={`border rounded-xl p-4 transition-all ${
             allReviewed
-              ? "border-accent-blue/40 bg-accent-blue/5"
+              ? "border-zinc-500/40 bg-zinc-50/[0.03]"
               : "border-navy-700 bg-navy-800/50"
           }`}
         >
@@ -216,7 +216,7 @@ export default function CompleteStep({ option, requirement, totalTime, onReset }
           <button
             onClick={handleApproveAll}
             disabled={!allReviewed}
-            className="w-full py-3 rounded-lg font-semibold text-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-accent-blue text-navy-900 hover:bg-accent-light active:scale-[0.98]"
+            className="w-full py-3 rounded-lg font-semibold text-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-zinc-50 text-zinc-950 hover:bg-zinc-200 active:scale-[0.98]"
           >
             {allReviewed ? "Approve & Forward to Supplier" : "Review All Documents First"}
           </button>
@@ -246,7 +246,7 @@ export default function CompleteStep({ option, requirement, totalTime, onReset }
 
           <button
             onClick={onReset}
-            className="w-full py-3 rounded-lg font-semibold bg-navy-700 text-white hover:bg-navy-600 transition-all"
+            className="w-full py-3 rounded-lg font-semibold bg-zinc-800 text-zinc-50 hover:bg-zinc-700 transition-all"
           >
             Start New Procurement
           </button>

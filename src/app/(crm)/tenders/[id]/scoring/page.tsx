@@ -14,8 +14,8 @@ export default async function ScoringPage({ params }: { params: Promise<{ id: st
     );
   }
 
-  const rankColors = ["border-accent-blue bg-accent-blue/5", "border-navy-600 bg-navy-800", "border-navy-600 bg-navy-800"];
-  const rankBadges = ["bg-accent-blue text-navy-900", "bg-navy-600 text-white", "bg-navy-600 text-white"];
+  const rankColors = ["border-zinc-600 bg-zinc-50/[0.03]", "border-navy-700 bg-navy-800", "border-navy-700 bg-navy-800"];
+  const rankBadges = ["bg-zinc-50 text-zinc-950", "bg-navy-600 text-white", "bg-navy-600 text-white"];
 
   return (
     <div className="space-y-4 max-w-3xl">
@@ -36,7 +36,7 @@ export default async function ScoringPage({ params }: { params: Promise<{ id: st
                 <p className="text-xs text-text-muted">Score: {opt.overallScore}/100 | Delivery: {opt.quote.deliveryDays} days</p>
               </div>
             </div>
-            {i === 0 && <span className="px-3 py-1 bg-accent-blue/20 text-accent-blue rounded-full text-xs font-semibold">RECOMMENDED</span>}
+            {i === 0 && <span className="px-3 py-1 bg-zinc-50/10 text-zinc-300 rounded-full text-xs font-semibold">RECOMMENDED</span>}
             {tender.selectedOption?.quote.supplierId === opt.quote.supplierId && (
               <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">SELECTED</span>
             )}

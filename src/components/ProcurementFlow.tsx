@@ -179,8 +179,8 @@ export default function ProcurementFlow() {
             {step === "querying" && <QueryingStep quotes={quotes} />}
             {step === "scoring" && (
               <div className="animate-slide-up flex flex-col items-center justify-center py-16 gap-4">
-                <div className="w-12 h-12 border-2 border-accent-blue border-t-transparent rounded-full animate-spin-slow" />
-                <p className="text-accent-blue font-medium">Scoring & ranking options...</p>
+                <div className="w-12 h-12 border-2 border-zinc-400 border-t-transparent rounded-full animate-spin-slow" />
+                <p className="text-zinc-300 font-medium">Scoring & ranking options...</p>
                 <p className="text-text-muted text-sm">
                   Multi-factor analysis with zero SPIF bias
                 </p>

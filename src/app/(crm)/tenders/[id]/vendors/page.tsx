@@ -73,7 +73,7 @@ function QuoteStat({ label, value }: { label: string; value: string }) {
   return (
     <div className="bg-navy-900/40 rounded-lg p-2.5 text-center">
       <p className="text-[10px] text-text-muted uppercase">{label}</p>
-      <p className="text-sm font-bold text-accent-blue">{value}</p>
+      <p className="text-sm font-bold text-zinc-50">{value}</p>
     </div>
   );
 }

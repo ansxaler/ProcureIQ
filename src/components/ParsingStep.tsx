@@ -10,8 +10,8 @@ export default function ParsingStep({ requirement }: Props) {
   if (!requirement) {
     return (
       <div className="animate-slide-up flex flex-col items-center justify-center py-16 gap-4">
-        <div className="w-12 h-12 border-2 border-accent-blue border-t-transparent rounded-full animate-spin-slow" />
-        <p className="text-accent-blue font-medium">AI is parsing your requirement...</p>
+        <div className="w-12 h-12 border-2 border-zinc-400 border-t-transparent rounded-full animate-spin-slow" />
+        <p className="text-zinc-300 font-medium">AI is parsing your requirement...</p>
       </div>
     );
   }

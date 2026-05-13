@@ -26,10 +26,10 @@ export default function EmailView({ threads }: { threads: EmailThread[] }) {
               key={t.id}
               onClick={() => setSelectedId(t.id)}
               className={`w-full text-left px-4 py-3 border-b border-navy-700/50 transition-colors ${
-                selectedId === t.id ? "bg-accent-blue/10" : "hover:bg-navy-700/50"
+                selectedId === t.id ? "bg-zinc-800" : "hover:bg-navy-700/50"
               }`}
             >
-              <p className={`text-sm font-medium truncate ${selectedId === t.id ? "text-accent-blue" : "text-white"}`}>
+              <p className={`text-sm font-medium truncate ${selectedId === t.id ? "text-zinc-50" : "text-zinc-300"}`}>
                 {t.subject}
               </p>
               <p className="text-xs text-text-muted mt-0.5">

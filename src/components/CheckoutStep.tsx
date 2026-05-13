@@ -46,7 +46,7 @@ export default function CheckoutStep({ option, onComplete }: Props) {
         <div className="flex justify-between items-center">
           <div>
             <p className="text-sm text-text-muted">Total Order Value</p>
-            <p className="text-3xl font-bold text-accent-blue">
+            <p className="text-3xl font-bold text-zinc-50">
               {"\u00A3"}{option.openBookBreakdown.totalCost.toLocaleString()}
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function CheckoutStep({ option, onComplete }: Props) {
                 isComplete
                   ? "bg-green-500/10 border-green-500/30"
                   : isCurrent
-                  ? "bg-accent-blue/10 border-accent-blue/30"
+                  ? "bg-zinc-50/5 border-zinc-500/30"
                   : "bg-navy-800/50 border-navy-700/50"
               }`}
             >
@@ -87,7 +87,7 @@ export default function CheckoutStep({ option, onComplete }: Props) {
               </span>
               {isComplete && <span className="text-green-400 text-sm font-mono">Done</span>}
               {isCurrent && (
-                <div className="w-4 h-4 border-2 border-accent-blue border-t-transparent rounded-full animate-spin" />
+                <div className="w-4 h-4 border-2 border-zinc-400 border-t-transparent rounded-full animate-spin" />
               )}
             </div>
           );
