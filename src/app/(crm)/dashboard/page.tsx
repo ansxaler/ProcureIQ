@@ -75,7 +75,7 @@ export default function DashboardPage() {
       <div className="bg-navy-800 border border-navy-700 rounded-xl p-5">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-sm font-semibold text-text-muted uppercase tracking-wider">Active Tenders</h2>
-          <Link href="/tenders" className="text-xs text-accent-blue hover:text-accent-light">View all &rarr;</Link>
+          <Link href="/tenders" className="text-xs text-zinc-400 hover:text-zinc-50">View all &rarr;</Link>
         </div>
         <div className="space-y-2">
           {activeTenders.map((t) => {

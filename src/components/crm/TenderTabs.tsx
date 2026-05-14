@@ -30,8 +30,8 @@ export default function TenderTabs({ tenderId }: { tenderId: string }) {
             href={href}
             className={`px-4 py-2.5 text-sm font-medium border-b-2 transition-colors ${
               isActive
-                ? "border-accent-blue text-accent-blue"
-                : "border-transparent text-text-muted hover:text-white hover:border-navy-600"
+                ? "border-zinc-50 text-zinc-50"
+                : "border-transparent text-text-muted hover:text-zinc-50 hover:border-zinc-700"
             }`}
           >
             {tab.label}

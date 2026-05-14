@@ -80,7 +80,7 @@ export default function QueryingStep({ quotes }: Props) {
                 </span>
               )}
               {!responded && (
-                <div className="w-3 h-3 border border-amber-400 border-t-transparent rounded-full animate-spin" />
+                <div className="w-3 h-3 border border-zinc-500 border-t-transparent rounded-full animate-spin" />
               )}
             </div>
           );

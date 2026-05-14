@@ -33,8 +33,8 @@ export default function SubmitStep({ onSubmit }: Props) {
             onClick={() => handleSample(i)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               selectedSample === i
-                ? "bg-accent-blue text-navy-900"
-                : "bg-navy-700 text-text-muted hover:bg-navy-600 hover:text-white"
+                ? "bg-zinc-50 text-zinc-950"
+                : "bg-navy-700 text-text-muted hover:bg-navy-600 hover:text-zinc-50"
             }`}
           >
             {sample.label}
@@ -50,14 +50,14 @@ export default function SubmitStep({ onSubmit }: Props) {
           setSelectedSample(null);
         }}
         placeholder="Describe what you need to procure... Include quantities, specifications, budget, timeline, and any compliance requirements."
-        className="w-full h-48 bg-navy-800 border border-navy-600 rounded-lg p-4 text-white placeholder:text-text-muted/50 focus:outline-none focus:border-accent-blue focus:ring-1 focus:ring-accent-blue resize-none"
+        className="w-full h-48 bg-navy-800 border border-navy-700 rounded-lg p-4 text-white placeholder:text-text-muted/50 focus:outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 resize-none"
       />
 
       {/* Submit */}
       <button
         onClick={() => text.trim() && onSubmit(text)}
         disabled={!text.trim()}
-        className="w-full py-3 rounded-lg font-semibold text-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-accent-blue text-navy-900 hover:bg-accent-light active:scale-[0.98]"
+        className="w-full py-3 rounded-lg font-semibold text-lg transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-zinc-50 text-zinc-950 hover:bg-zinc-200 active:scale-[0.98]"
       >
         Submit to ProcureIQ Agent
       </button>

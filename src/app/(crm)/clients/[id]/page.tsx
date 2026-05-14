@@ -17,7 +17,7 @@ export default async function ClientDetailPage({ params }: { params: Promise<{ i
 
       {/* Header */}
       <div className="flex items-center gap-4">
-        <div className="w-14 h-14 bg-steel-500/30 rounded-xl flex items-center justify-center text-lg font-bold text-accent-blue">
+        <div className="w-14 h-14 bg-zinc-800 rounded-xl flex items-center justify-center text-lg font-bold text-zinc-50">
           {client.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
         </div>
         <div>
@@ -44,7 +44,7 @@ export default async function ClientDetailPage({ params }: { params: Promise<{ i
           </div>
           <div>
             <p className="text-xs text-text-muted">Email</p>
-            <p className="text-accent-blue">{client.contactEmail}</p>
+            <p className="text-zinc-300">{client.contactEmail}</p>
           </div>
           <div>
             <p className="text-xs text-text-muted">Client Since</p>

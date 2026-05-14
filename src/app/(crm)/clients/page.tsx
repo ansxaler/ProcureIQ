@@ -16,10 +16,10 @@ export default function ClientsPage() {
             <Link
               key={c.id}
               href={`/clients/${c.id}`}
-              className="bg-navy-800 border border-navy-700 rounded-xl p-5 hover:border-accent-blue/30 transition-all"
+              className="bg-navy-800 border border-navy-700 rounded-xl p-5 hover:border-zinc-600 transition-all"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-steel-500/30 rounded-lg flex items-center justify-center text-sm font-bold text-accent-blue">
+                <div className="w-10 h-10 bg-zinc-800 rounded-lg flex items-center justify-center text-sm font-bold text-zinc-50">
                   {c.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
                 </div>
                 <div>

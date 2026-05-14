@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --navy-900: #0f1729;
-  --navy-800: #1a2744;
-  --navy-700: #243354;
-  --navy-600: #2d4066;
-  --steel-500: #3d5a80;
-  --steel-400: #5b7faa;
-  --accent-blue: #7eb8da;
-  --accent-light: #b8d8e8;
-  --white: #ffffff;
-  --text-muted: #8ea4c0;
+  --navy-900: #09090b;
+  --navy-800: #18181b;
+  --navy-700: #27272a;
+  --navy-600: #3f3f46;
+  --steel-500: #52525b;
+  --steel-400: #71717a;
+  --accent-blue: #94a3b8;
+  --accent-light: #cbd5e1;
+  --white: #fafafa;
+  --text-muted: #71717a;
   --success: #22c55e;
   --warning: #f59e0b;
   --danger: #ef4444;
@@ -34,11 +34,6 @@ body {
   background: var(--navy-900);
   color: var(--white);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(126, 184, 218, 0.4); }
-  50% { box-shadow: 0 0 20px 4px rgba(126, 184, 218, 0.2); }
 }
 
 @keyframes slide-up {
@@ -67,10 +62,6 @@ body {
 
 .animate-fade-in {
   animation: fade-in 0.4s ease-out forwards;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .animate-spin-slow {

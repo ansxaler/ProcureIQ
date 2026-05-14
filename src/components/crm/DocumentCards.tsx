@@ -59,7 +59,7 @@ export default function DocumentCards({ docs, tender }: { docs: TenderDocument[]
                     <button onClick={() => handlePreview(d.type)} className="px-3 py-1.5 text-xs font-medium bg-navy-700 hover:bg-navy-600 rounded-lg transition-colors">
                       Preview PDF
                     </button>
-                    <button onClick={() => handleDownload(d.type)} className="px-3 py-1.5 text-xs font-medium bg-accent-blue/20 hover:bg-accent-blue/30 text-accent-blue rounded-lg transition-colors">
+                    <button onClick={() => handleDownload(d.type)} className="px-3 py-1.5 text-xs font-medium bg-zinc-50/10 hover:bg-zinc-50/15 text-zinc-300 rounded-lg transition-colors">
                       Download
                     </button>
                   </>

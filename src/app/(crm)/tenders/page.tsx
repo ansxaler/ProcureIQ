@@ -31,7 +31,7 @@ export default function TendersPage() {
               return (
                 <tr key={t.id} className="border-b border-navy-700/50 hover:bg-navy-700/30 transition-colors">
                   <td className="px-4 py-3">
-                    <Link href={`/tenders/${t.id}`} className="hover:text-accent-blue transition-colors">
+                    <Link href={`/tenders/${t.id}`} className="hover:text-zinc-50 transition-colors">
                       <p className="font-medium text-sm">{t.title}</p>
                       <p className="text-xs text-text-muted mt-0.5">Qty: {t.quantity}</p>
                     </Link>

@@ -35,7 +35,7 @@ export default function StepIndicator({ currentStep }: { currentStep: FlowStep }
                 className={`
                   w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-500
                   ${isComplete ? "bg-green-500 text-white" : ""}
-                  ${isActive ? "bg-accent-blue text-navy-900 animate-pulse-glow" : ""}
+                  ${isActive ? "bg-zinc-50 text-zinc-950" : ""}
                   ${isPending ? "bg-navy-700 text-text-muted" : ""}
                 `}
               >
@@ -43,14 +43,14 @@ export default function StepIndicator({ currentStep }: { currentStep: FlowStep }
               </div>
               <span
                 className={`text-[10px] mt-1 font-medium transition-colors ${
-                  isActive ? "text-accent-blue" : isComplete ? "text-green-400" : "text-text-muted"
+                  isActive ? "text-zinc-50" : isComplete ? "text-green-400" : "text-text-muted"
                 }`}
               >
                 {step.label}
               </span>
               <span
                 className={`text-[9px] ${
-                  isActive ? "text-accent-light" : "text-text-muted/50"
+                  isActive ? "text-zinc-400" : "text-text-muted/50"
                 }`}
               >
                 {step.time}

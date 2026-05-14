@@ -1,0 +1,24 @@
+# ProcureIQ pnpm workspace + supply-chain hardening policy.
+#
+# Drives both lockfile generation and install-time safety. The rationale and
+# the process for adding entries to allowBuilds / minimumReleaseAgeExclude
+# is documented in docs/superpowers/security/supply-chain-hardening.md.
+
+minimumReleaseAge: 1440
+trustPolicy: no-downgrade
+blockExoticSubdeps: true
+strictDepBuilds: true
+savePrefix: ""
+
+# --- allowBuilds ---------------------------------------------------------
+allowBuilds:
+  # core-js: prints a funding/support banner at install time; no runtime impact.
+  "core-js@3.49.0": false
+  # sharp: validates native image-processing binary used by next/image.
+  "sharp@0.34.5": true
+  # unrs-resolver: Rust-based path resolver used by eslint-plugin-import via
+  # eslint-config-next. Native binary fetch at install time — required.
+  "unrs-resolver@1.11.1": true
+
+# minimumReleaseAgeExclude:
+#   - "package-name@1.2.3"  # reason / reviewer / remove-by date
