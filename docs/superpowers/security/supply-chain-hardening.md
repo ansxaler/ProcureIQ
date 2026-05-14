@@ -116,7 +116,7 @@ When in doubt, deny first and verify the build still works.
 ## Where this gets enforced
 
 - **Local dev** — pnpm reads `pnpm-workspace.yaml` on every install.
-- **Vercel builds** — `vercel.json` sets `installCommand` to `npm install --global sfw && sfw pnpm install --frozen-lockfile`. Same policy applies, plus the firewall.
+- **Vercel builds** — `vercel.json` sets `installCommand` to `corepack enable && npm install --global sfw && sfw pnpm install --frozen-lockfile`. The leading `corepack enable` is load-bearing: Vercel's build container ships with an old default pnpm (~v6) that can't read pnpm 11+ lockfiles. Overriding `installCommand` bypasses Vercel's normal `packageManager` detection, so we must enable Corepack ourselves to activate the pinned version. Same policy applies, plus the firewall.
 - **CI (GitHub Actions, if/when we add it)** — install `sfw` before `pnpm install --frozen-lockfile`.
 
 If you change `pnpm-workspace.yaml`, also run `CI=true sfw pnpm install --frozen-lockfile` locally before committing — the lockfile and the policy must agree.
